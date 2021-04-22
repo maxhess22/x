@@ -1,5 +1,66 @@
 inicio de la tarea 1:
 
+
+
+
+
+Contexto del problema:
+Un grupo de alumnos recién egresados de la carrera de mecánica automotriz, deciden poner en
+funcionamiento un taller mecánico haciendo gala de las distintas habilidades adquiridas a lo largo de su
+carrera.
+Cada uno de los socios participantes aportan con su experiencia y habilidades particulares, así mientras
+uno es especialista en electrónica automotriz, otro es especialista en cajas de cambio y otro en
+suspensión y dirección. En su conjunto pueden prestar un servicio completo a los clientes que necesiten
+tareas de mecánica en general para sus vehículos a bencina o diesel.
+Hasta el momento, su taller ha funcionado de forma bastante buena, logrando posicionarse muy bien
+en el mercado, pese a estar en una zona que se caracteriza por tener muchos talleres mecánicos en los
+alrededores. Producto de esta situación de fuerte competencia, siempre están buscando la forma de
+poder atraer más clientes utilizando variadas estrategias promocionales. Es por esta razón que deciden
+innovar y quieren crear un sistema que les permita visibilizar los trabajos que realizan y el proceso que
+hacen a través de un sistema amigable y bien construido.
+La encargada del taller los contacta para una reunión con los mecánicos y que éstos expliquen las
+necesidades que la organización tiene, utilizando la experiencia que cada uno de ellos poseen y las
+necesidades que tienen respecto a esta nueva plataforma.
+Recuerda que tus usuarios no son usuarios ni siquiera intermedios en el uso de nuevas tecnologías, sólo
+saben cómo funciona Facebook, el navegador web y un poco de office.
+Así, los usuarios hacen muchas definiciones de qué es lo que quieren y necesitan que tenga la página
+web y esto se resume de la siguiente forma.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. La página web debe tener un menú en la parte superior con el logo del taller mecánico. *(MAX)*
 
 2. En la página principal deben aparecer los últimos trabajos realizados en un carrusel de imágenes 
