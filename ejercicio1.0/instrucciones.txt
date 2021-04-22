@@ -1,1 +1,31 @@
 inicio de la tarea 1:
+
+1. La página web debe tener un menú en la parte superior con el logo del taller mecánico.
+2. En la página principal deben aparecer los últimos trabajos realizados en un carrusel de imágenes 
+con el texto del título de cada trabajo.
+3. Al hacer clic en uno de los trabajos, se debe poder entrar a ver el detalle de este (El diagnóstico, 
+el mecánico, la fecha, el listado de materiales que se utilizaron, etc.) y la galería de fotos si es que 
+tiene. Todos los trabajos realizados al menos poseen una foto.
+4. Además de la galería, la página principal deberá tener una opción de búsqueda por nombre del 
+mecánico o por categoría de las atenciones o por palabra clave.
+5. También deberá mostrar la cantidad de mantenciones que han sido ingresados por un usuario.
+6. Es necesario tener un formulario de contacto general.
+7. Desde la página principal deberías poder acceder a ver las atenciones por categoría o por 
+mecánico.
+8. El usuario debería tener la opción de autenticarse en el sitio mediante email y password.
+9. Se debe mostrar si el usuario ha logueado o no.
+10. Los usuarios deberían poder registrarse, sólo es necesario el email, el nombre y el password.
+11. El proceso para agregar nuevas atenciones es el siguiente:
+a. Cada mecánico posee una cuenta creada por el administrador del sitio.
+b. Una vez que el mecánico ingresa al sitio (email y password), puede publicar las 
+atenciones que ha realizado en el día y poner la o las imágenes asociadas llenando todos 
+los datos en el formulario dispuesto para esto.
+c. La atención no se publica en la página hasta que pasa por el visto bueno del 
+administrador, el cual puede rechazar la publicación por mala redacción o faltas de 
+ortografía o porque las imágenes son de mala calidad.
+d. Si el administrador rechaza la publicación, debe informar por qué lo hizo y el integrante 
+de la cooperativa visualizará esta información en el momento en que ingrese a la 
+plataforma.
+12. Cada una de las atenciones publicadas debe estar asociada a una categoría.
+13. Es fundamental que la página sea responsiva y que se adapte tanto a pantallas grandes como a 
+pantallas de dispositivos móviles
