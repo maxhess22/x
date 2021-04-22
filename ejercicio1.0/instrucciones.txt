@@ -1,6 +1,6 @@
 inicio de la tarea 1:
 
-1. La página web debe tener un menú en la parte superior con el logo del taller mecánico.
+1. La página web debe tener un menú en la parte superior con el logo del taller mecánico. *(MAX)*
 
 2. En la página principal deben aparecer los últimos trabajos realizados en un carrusel de imágenes 
 con el texto del título de cada trabajo.
