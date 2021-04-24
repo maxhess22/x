@@ -1,9 +1,9 @@
 
-- Logo
+- Logo {}
 
-- Menu
+- Menu {}
 
-- Container - fluid con 2 columnas (foto - parrafo propuesta  de valor)
+- Container - fluid con 2 columnas (foto - parrafo propuesta  de valor)  
 
 - Carrusel con link(opcional) 3 imagenes de ofertas.
 
