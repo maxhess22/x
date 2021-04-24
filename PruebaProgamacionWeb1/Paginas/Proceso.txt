@@ -1,0 +1,12 @@
+
+- Logo
+
+- Menu
+
+- Container - fluid con 2 columnas (foto - parrafo propuesta  de valor)
+
+- Carrusel con link(opcional) 3 imagenes de ofertas.
+
+- Container fluid con 3 columnas (Premium ,Vegetariano ,Sabores del mundo)
+
+-Pie de la pagina
