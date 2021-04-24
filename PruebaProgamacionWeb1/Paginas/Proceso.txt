@@ -7,6 +7,6 @@
 
 - Carrusel con link(opcional) 3 imagenes de ofertas.
 
-- Container fluid con 3 columnas (Premium ,Vegetariano ,Sabores del mundo)
+- Container fluid con 2 columnas (Premium ,Vegetariano ,Sabores del mundo + fotos y link de ficha)
 
 -Pie de la pagina
