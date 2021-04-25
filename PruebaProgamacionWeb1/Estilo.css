@@ -17,19 +17,31 @@ margin-right: 20px;
     margin-left: 20px;
 }
 
+#container2{
+    margin-top: 30px;
+    background-color:sandybrown;
+}
+
+
+
+
+
 #imagen3{
     margin-top: 30px;
     margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     width: 500px;
    
 }
 
 #parrafo{
+    
     margin-top: 30px;
 }
 
 #carrusel{
-    padding-top: 50px;
+    padding-top: 100px;
     width: 900px;
 }
 
