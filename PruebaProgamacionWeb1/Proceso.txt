@@ -3,18 +3,11 @@
 
 - Menu {}
 
-- Container - fluid con 2 columnas (foto - parrafo propuesta  de valor)  
+- Container - fluid con 2 columnas (foto - parrafo propuesta  de valor)   {}
 
-- Carrusel con link(opcional) 3 imagenes de ofertas.
+- Carrusel con link(opcional) 3 imagenes de ofertas. {}
 
-- Container fluid con 2 columnas (Premium ,Vegetariano ,Sabores del mundo + fotos y link de ficha)
+- Container fluid con 2 columnas (Premium ,Vegetariano ,Sabores del mundo + fotos y link de ficha) {} - 
 
--Pie de la pagina
+-Pie de la pagina {}
 
-
-https://cdn.pixabay.com/photo/2017/10/02/22/24/pizza-2810589_960_720.jpg foto --> de valor
-https://cdn.pixabay.com/photo/2018/03/15/07/06/food-3227303_960_720.jpg  foto --> Vegetariano
-https://cdn.pixabay.com/photo/2021/04/06/14/38/pizza-6156566_960_720.jpg foto --> sabores del mundo
-https://cdn.pixabay.com/photo/2019/09/24/08/53/pizza-4500786_960_720.jpg foto --> premium
-
-https://cdn.pixabay.com/photo/2017/09/18/20/46/pizza-2763173_960_720.jpg foto --> propocion 1
