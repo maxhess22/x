@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="EstiloLigaESP.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <title>Deportes</title>
+    <link rel="stylesheet" href="Style.css">
+    <title>Ligas Españolas</title>
   </head>
   <body>
-     <!--Barra de inicio -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+    <!--Barra de inicio -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,53 +31,54 @@
                 <a class="nav-link" href="LigaESP.html">Liga España</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="Formulario.html">Formulario</a>
-                </li>     
+                    <a class="nav-link" href="Formulario.html">Formulario</a>
+                    </li>
             </ul>
                 </div>
         </div>
-    </nav>   
-    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark"><h1 class="text-center display-4 fst-italic">Lista Deportiva</h1></div>
+    </nav>
     
-    <div class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark"><h1 class="text-center display-4 fst-italic">Ligas de España</h1></div> 
+    <div class="container" >
         
         
-        <div class="row">
-            <table class="table" id="Deportes">
+        <div class="row" >
+            <table class="table" id="ligas_España">
                 <thead>
-                    <tr class="display-8 fst-italic">
+                    <tr class="display-6 fst-italic">
                         <th scope="col">#</th>
                         <th scope="col">Deporte</th>
-                        <th scope="col">Categoria</th>
+                        <th scope="col">Nombre</th>
                         <th scope="col">Imagen</th>
                         <th scope="col">Descripcion</th>
                     </tr>
                 </thead>
             </table>
         </div>
-        <br>
         <div class="row" >
             <button type="button" class="btn btn-dark" id="enviar">Traer datos</button>
         </div>
+        
     </div>
-    <div class="p-4 p-md-5  text-white rounded bg-dark"><h1 class="text-center display-4 fst-italic">Lista Deportiva</h1></div>
-  
-
+    <div class="p-4 p-md-5  text-white rounded bg-dark"><h1 class="text-center display-4 fst-italic">Ligas de España</h1></div> 
+    
+    
+    
+    
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
     <script>
       $("#enviar").click().hide(function(){
-          $.get("https://www.thesportsdb.com/api/v1/json/1/all_sports.php", 
+          $.get("https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=Spain", 
               function(data){
-                  $.each(data.sports, function(i, item){
-                      $("#Deportes").append("<tr><td>" + item.idSport + "</td><td>" + item.strSport + "</td><td>"+ item.strFormat +"</td><td> <img src='" + item.strSportThumb + "'>" +"</td><td> " + item.strSportDescription + "</td></tr>")
+                  $.each(data.countrys, function(i, item){
+                      $("#ligas_España").append("<tr><td>" + item.idLeague + "</td><td>" + item.strSport + "</td><td>"+ item.strLeague +"</td><td> <img src='" + item.strBadge + "'>" +"</td><td> " + item.strDescriptionEN + "</td></tr>")
                   });
               });
-              
+
       });
-     
   </script>
-    
   </body>
 </html>

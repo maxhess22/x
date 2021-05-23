@@ -1,0 +1,36 @@
+body{
+    background-color :gray ;
+}
+
+.display-4{
+    font-size: 2.5rem;
+    
+}
+.fst-italic{
+    font-style: italic! important;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#ligas_España{
+    background-color:cornsilk;
+    
+}
+#Deportes{
+    background-color:cornsilk;
+    
+}
+#formulario{
+    margin: auto;
+}
+p{
+    color: black;
+}
+
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
