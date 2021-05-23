@@ -56,12 +56,12 @@
                 </div>
                 <div class="form-group">
                     <label for="Rut">Rut</label> 
-                    <input type="text" name="rut" id="rut"  placeholder="Ingrese rut ej:11111111-1"class="form-control" >
+                    <input type="text" name="rut" id="rut"  placeholder="Ingrese rut ej:11111111-1"class="form-control" maxlength="10">
                     <p class="text" id="msgerror"></p>
                 </div>
                 <div class="form-group">
                     <label for="Con">Contraseña</label>
-                    <input type="password" name="Con" id="Con" class="form-control"  >
+                    <input type="password" name="Con" id="Con" class="form-control"   >
                     <label for="Con2">Ingrese nuevamente la contraseña</label>
                     <input type="password" name="Con2" id="Con2" class="form-control" >
                 </div>
@@ -113,6 +113,7 @@
                 if(($("#Con").val().length) != ($("#Con2").val().length)){
                     mensaje =" Contraseñas no Coinciden intente de nuevo!!"
                 }
+                
 
                 var Fn = {
           // Valida el rut con su cadena completa "XXXXXXXX-X"
