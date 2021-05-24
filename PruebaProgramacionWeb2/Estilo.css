@@ -1,0 +1,49 @@
+
+body{
+    background-color: rgb(10, 41, 68);
+
+}
+
+#container{
+    margin-top: 100px;
+
+}
+
+#inicio{
+    background-color: rgb(170, 170, 170);
+}
+
+
+#carouselExampleControls{
+  width: 100%;
+
+}
+
+
+#Imagen1 {
+    width: 480px;
+}
+
+#Imagen2 {
+    width: 480px;
+}
+
+#Imagen3 {
+    width: 480px;
+}
+
+#info{
+    margin-top: 70px;
+    display:flex;
+}
+
+#card1{
+    
+    width:100%;
+}
+
+
+#pie{
+    width:100%;
+    margin-top: 400px;
+}
