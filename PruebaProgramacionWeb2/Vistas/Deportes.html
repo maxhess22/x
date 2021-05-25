@@ -59,12 +59,12 @@
             <button type="button" class="btn btn-dark" id="enviar">Traer datos</button>
         </div>
     </div>
-    <div id ="banner"class="p-4 p-md-5  text-white rounded bg-dark"><h1 class="text-center display-4 fst-italic">Lista Deportiva</h1></div>
-  
-
     
+
+   
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
     <script>
       $("#enviar").click().hide(function(){
           $.get("https://www.thesportsdb.com/api/v1/json/1/all_sports.php", 
@@ -78,7 +78,7 @@
      
   </script>
     
-  
+
 
 
 
@@ -87,54 +87,40 @@
 
 
 <!-- Footer -->
-<footer id="pie" class="page-footer  ">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
+<!-- pie de la pagina-->
+<footer id="pie"class="bg-dark text-center text-lg-start">
+    <div class="container p-4">
       <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 id="parrafof" class="text-uppercase">Quienes somos</h5>
-          <p id="parrafof">Nuestra pagina esta orientada a ofrecer la mejor informacion acerca de todos los deportes y sus ligas nacionales.</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-    
-        <div class="col-md-3 mb-md-0 mb-3">
-
-     
-          <h5 id="parrafof" class="text-uppercase">Contacto:</h5>
-
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 id="parrafof" class="text-uppercase text-center">Contactos</h5>
+          
           <div>
-            <p> <img src="Iconos/instagram.svg" alt="" width="30px" >
-            </p>
-          </div>
-            <div>
-              <p>
-                <img src="Iconos/globe (1).svg" alt="" width="30px">
-             </p>
-            </div>
-          </div>
+          <p id="parrafof" > <img id="icon"src="Iconos/globe (1).svg" alt="" width="30px">  www.TodoSports.cl </p></div>
+          
+          <div>
+          <p id="parrafof" > <img id="icon"src="Iconos/instagram.svg" alt="" width="30px"> @TodoSports</p></div>
+          
+          <div>
+          <p id="parrafof" >  <img id="icon"src="Iconos/envelope.svg" alt="" width="30px"> TodoSports@gmail.com</p></div> 
         </div>
+        
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 id="parrafof"class="text-uppercase text-center">TodoSports</h5>
+         
+          <p id="parrafof">
+            Nuestro sitio esta dedicado para todos los amantes de los deportes. Entregamos toda esta información sin fines de lucro y te damos la posibilidad de interactuar con nosotros a través de nuestras redes.
+          </p>
+        </div>
+        <!-- Copyright -->
+        <div id="parrafof" class="footer-copyright text-center py-3">© 2020 Copyright
+        
+        </div>
+        
       </div>
-
-
-      <!-- Copyright -->
-      <div id="parrafof" class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a id="parrafof" href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-      </div>
-      <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
+      
+    </div>
+   
+  </footer>
 
 
 
@@ -145,6 +131,9 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body> 
 
 
 
@@ -153,7 +142,4 @@
 
 
 
-
-
-</body>
 </html>
