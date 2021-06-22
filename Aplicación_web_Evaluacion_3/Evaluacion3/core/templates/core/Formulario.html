@@ -45,16 +45,136 @@
    
    
    
+       <div class="container " >
+        <div class="row ">
+            <form  id="formulario" >
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre"  placeholder="Ingrese nombre y apellido"class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese mail"class="form-control"  >
+                </div>
+                <div class="form-group">
+                    <label for="Con">Contraseña</label>
+                    <input type="password" name="Con" id="Con" class="form-control"   >
+                    <label for="Con2">Ingrese nuevamente la contraseña</label>
+                    <input type="password" name="Con2" id="Con2" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="Comentarios">Ingrese Algun comentario</label>
+                    <br>
+                    <textarea name="Comentarios" id="Comentarios" cols="30" rows="10" placeholder="Opcional"></textarea>
+                </div  >
+                <div>
+                
+                <button type="submit" value="Enviar" class="btn btn-dark" id="enviar">Enviar</button> <a class="btn btn-dark" href="{% url 'home' %}" role="button">Volver</a>    <button type="reset" value="Borrar" class="btn btn-dark" id="borrar">Borrar</button>
+                
+                </div>
+            </form>
+        </div>
+        
+    </div>
    
    
-    <h1>Vista del formulario</h1>
-
-   
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
 
-  
+
+
+
+
+ $(document).click(function(){
+            
+            $("#error").hide();
+            $("#formulario").submit(function(){
+                var mensaje = "";
+                if($("#nombre").val().trim().length == 0){
+                    mensaje = "El nombre esta en blanco"
+                }
+                if($("#email").val().trim().length == 0){
+                    mensaje = "El email está en blanco"}
+                if($("#rut").val().length==0){
+                    mensaje = "El Rut está en blanco"
+                }
+               
+                if($("#Con").val().length==0){
+                    mensaje = "La Contraseña 2 esta en blanco"
+                }   
+                if($("#Con2").val().length==0){
+                    mensaje = "La Contraseña esta en blanco"
+                }   
+                if(($("#Con").val().length) != ($("#Con2").val().length)){
+                    mensaje =" Contraseñas no Coinciden intente de nuevo!!"
+                }
+                
+
+                var Fn = {
+          // Valida el rut con su cadena completa "XXXXXXXX-X"
+             validaRut : function (rutCompleto) {
+             rutCompleto = rutCompleto.replace("‐","-");
+             if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
+             return false;
+                var tmp   = rutCompleto.split('-');
+                var digv  = tmp[1]; 
+                var rut   = tmp[0];
+                if ( digv == 'K' ) digv = 'k' ;
+      
+                return (Fn.dv(rut) == digv );
+             },
+                dv : function(T){
+                 var M=0,S=1;
+                for(;T;T=Math.floor(T/10))
+                    S=(S+T%10*(9-M++%6))%11;
+                return S?S-1:'k';
+            }
+          
+          }     
+                if (Fn.validaRut( $("#rut").val() )){
+                    $("#msgerror").html("El rut ingresado es válido ");   
+                } else {
+                    $("#msgerror").html("El Rut no es válido ");
+                }
+                
+                
+                if(mensaje != ""){
+                    $("#error").html(mensaje);
+                    $("#error").show();
+                    
+                    event.preventDefault();
+                }
+
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+   
     
   </body>
 </html>

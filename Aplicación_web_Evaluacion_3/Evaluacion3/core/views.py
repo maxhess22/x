@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from .models import libro
 
-def form(request):
+def form(request):   
     return render(request,'core/Formulario.html')
 
 
 def home(request):
+  
     return render(request,'core/home.html')
 
 
@@ -13,7 +15,9 @@ def añadir(request):
 
 
 def visualizacion(request):
-    return render(request,'core/MostratDtatos.html')
+    libros = libro.objects.all()
+    datos ={ 'libros':libros}
+    return render(request,'core/MostratDtatos.html',datos)
 
 
 
