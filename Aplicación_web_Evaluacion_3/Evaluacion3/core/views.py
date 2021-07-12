@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from .models import libro
+from django.template import loader
+from .models import libro,categoria_libro
+from django.forms import ModelForm
+from .forms import LibroForm
 
 def form(request):   
     return render(request,'core/Formulario.html')
@@ -7,11 +10,19 @@ def form(request):
 
 def home(request):
   
+    
     return render(request,'core/home.html')
 
 
-def añadir(request):
-    return render(request,'core/AgregarDatos.html')
+def form_libro(request):
+    datos ={ 'form': LibroForm()}
+    if request.method== 'POST':
+        Formulario = LibroForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardados correctamente"
+
+    return render(request,'core/form_libro.html', datos)
 
 
 def visualizacion(request):

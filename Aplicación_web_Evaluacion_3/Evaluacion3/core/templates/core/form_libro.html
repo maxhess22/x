@@ -38,7 +38,29 @@
     
     
     
-    <h1>añadir datos</h1>
+<h1>Añade libros a el inventario!</h1>
+
+<div class="row">
+  
+  <form action="" method="post" id="formulario">
+    {% csrf_token %}
+    <div class="form-group">
+      {{ form.as_table }}
+    </div>
+  </form>
+
+
+  <input type="submit" class="btn btn-danger" id="enviar" value="enviar">
+  <input type="reset"  class="btn btn-primary" id="limpiar " value="limpiar">
+  <div id="error" class="alert alert-danger"   role="alert"></div>
+  </form >
+  
+  <div class="alert alert-success " role="alert">
+    {{mensaje}}
+  </div>
+
+</div>
+
 
    
 
