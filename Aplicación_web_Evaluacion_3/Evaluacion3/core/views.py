@@ -18,8 +18,8 @@ def form_libro(request):
     datos ={ 'form': LibroForm()}
     if request.method== 'POST':
         Formulario = LibroForm(request.POST)
-        if formulario.is_valid:
-            formulario.save()
+        if Formulario.is_valid:
+            Formulario.save()
             datos['mensaje'] = "Guardados correctamente"
 
     return render(request,'core/form_libro.html', datos)

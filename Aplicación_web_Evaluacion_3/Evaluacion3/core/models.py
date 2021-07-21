@@ -18,3 +18,9 @@ class libro(models.Model):
     categoria_libro = models.ForeignKey( categoria_libro, on_delete=models.CASCADE)
 
  
+
+
+
+
+
+
