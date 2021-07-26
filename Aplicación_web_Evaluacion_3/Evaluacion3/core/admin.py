@@ -1,8 +1,29 @@
 from django.contrib import admin
-from .models import libro,categoria_libro
+from .models import Libro,Categoria_libro,Banco,Pais
 
-admin.site.register(libro)
-admin.site.register(categoria_libro)
+
+
+
+class Categoria_libroAdmin(admin.ModelAdmin):
+    search_fields = ('nombre_categoria'),
+    ordering = ['nombre_categoria']
+
+class LibroAdmin(admin.ModelAdmin):
+    
+    ordering = ['nombre_libro']
+    autocomplete_fields = ['categoria_libro']
+    
+
+
+
+
+
+
+
+admin.site.register(Libro, LibroAdmin)
+admin.site.register(Categoria_libro, Categoria_libroAdmin )
+admin.site.register(Banco)
+admin.site.register(Pais)
 
 
 

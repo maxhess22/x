@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import loader
-from .models import libro,categoria_libro
+from .models import Libro,Categoria_libro
 from django.forms import ModelForm
 from .forms import LibroForm
 
@@ -26,7 +26,7 @@ def form_libro(request):
 
 
 def visualizacion(request):
-    libros = libro.objects.all()
+    libros = Libro.objects.all()
     datos ={ 'libros':libros}
     return render(request,'core/MostratDtatos.html',datos)
 
