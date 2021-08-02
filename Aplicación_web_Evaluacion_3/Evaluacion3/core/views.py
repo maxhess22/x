@@ -30,5 +30,8 @@ def visualizacion(request):
     datos ={ 'libros':libros}
     return render(request,'core/MostratDtatos.html',datos)
 
+def testBasehtml(request):
+    return render(request, 'core\hola.html')
+
 
 
