@@ -3,9 +3,9 @@
 
 
 
-<div id="container1" class="container">
+<div id="container1" class="container-sm">
   <div class="row">
-    <div class=" col-md-4 offset-md-3">
+    <div class=" col-sm-4 offset-sm-3">
       <div class="card bg-secondary">
         <div class="card-body">
           <form action="" method="POST" id="formulario">
@@ -30,9 +30,14 @@
               {{form.categoria_libro }}
             </div>
             <hr>
-            <input class="btn btn-info" type="submit"  id="enviar" value="enviar">
-          
-            <input class="btn btn-info" type="reset"   id="limpiar " value="limpiar">
+            <div class="row">
+              <div class="col-sm-1">
+                <input class="btn btn-info" type="submit"  id="enviar" value="enviar">
+              </div>
+              <div class="col-sm-1 offset-sm-2">
+              <input class="btn btn-info" type="reset"   id="limpiar " value="limpiar">
+              </div>
+            </div>
           </form >
         </div>
       </div>

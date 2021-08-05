@@ -5,20 +5,21 @@ from django.forms import ModelForm
 from .forms import LibroForm
 import django_excel as excel
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 
 
-
+@login_required
 def form(request):   
     return render(request,'core/Formulario.html')
 
-
+@login_required
 def home(request):
   
     
     return render(request,'core/home.html')
 
-
+@login_required
 def form_libro(request):
     datos ={ 'form': LibroForm()}
     if request.method== 'POST':
@@ -29,13 +30,13 @@ def form_libro(request):
 
     return render(request,'core/form_libro.html', datos)
 
-
+@login_required
 def visualizacion(request):
     libros = Libro.objects.all()
     datos ={ 'libros':libros}
     return render(request,'core/MostratDtatos.html',datos)
 
-
+@login_required
 def listresults(request):
     export = []
     # Se agregan los encabezados de las columnas
@@ -68,17 +69,6 @@ def listresults(request):
 
 
 
-def my_view(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        # Redirect to a success page.
-        ...
-    else:
-        # Return an 'invalid login' error message.
-        ...
 
 
 
