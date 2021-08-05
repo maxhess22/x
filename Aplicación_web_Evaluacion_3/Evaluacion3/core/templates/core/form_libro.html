@@ -1,7 +1,9 @@
 {% extends 'core\base.html' %}
 {% block content %}     
-<div id="container1" class="container">
 
+
+
+<div id="container1" class="container">
   <div class="row">
     <div class="col-12 col-md-6 offset-md-3">
       <div class="card">
@@ -25,10 +27,11 @@
             </div>
             <br>
             <div class="form-group">
-              {{form.Categoria_libro}}
+              {{form.categoria_libro }}
             </div>
             <hr>
             <input class="btn btn-primary" type="submit"  id="enviar" value="enviar">
+          
             <input class="btn btn-primary" type="reset"   id="limpiar " value="limpiar">
           </form >
         </div>
@@ -36,4 +39,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}

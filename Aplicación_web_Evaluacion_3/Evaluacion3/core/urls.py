@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home,form,form_libro,visualizacion, testBasehtml
+from .views import home,form,form_libro,visualizacion, listresults
 
 
 
@@ -9,6 +9,6 @@ urlpatterns = [
     path('formulario', form, name="forma"),
     path("Añadir", form_libro, name="añadir"),
     path("visualizar", visualizacion, name="visualizar1"),
-    path('hola', testBasehtml, name="testBasehtml" )
-
+    path("descarga", listresults, name="descarga"),
+    
 ]

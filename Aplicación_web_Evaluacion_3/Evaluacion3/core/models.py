@@ -1,4 +1,5 @@
 from django.db import models    
+from django.conf import settings
 
 
 
@@ -41,11 +42,6 @@ class Libro(models.Model):
     descripcion_libro = models.CharField(max_length=50, verbose_name = "Descripcion del libro")
     categoria_libro = models.ForeignKey( Categoria_libro, on_delete=models.CASCADE)
     
-
-
-
-
-
 
 
 

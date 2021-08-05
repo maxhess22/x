@@ -42,8 +42,38 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'crispy_forms',
+    'django_select2',
+    'django_redis',
+    'django_excel',
+
     
 ]
+
+SELECT2_PACKAGE= 'Boostrap4'
+
+
+
+
+CACHES = {
+    # … default cache config and others
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+# Tell select2 which cache configuration to use:
+SELECT2_CACHE_BACKEND = "default"
+
+FILE_UPLOAD_HANDLERS  =  ( "django_excel.ExcelMemoryFileUploadHandler" , 
+                        "django_excel.TemporaryExcelFileUploadHandler" )
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

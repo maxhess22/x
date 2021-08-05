@@ -3,35 +3,41 @@
 {% block content %}  
   {% load static %}
   
-  <div id="body1">
-    <div id="container" class="row">
-    <div class="col">
-      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum voluptates quae explicabo 
-        ex aliquid, minima dolor velit earum sequi nisi cumque cupiditate quia nostrum ullam? 
-        Ipsa nam possimus dignissimos dicta.</h2> 
+    
+      <div id="container" class="row ">
+        <div class="col-4 offset-md-4 ">
+          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum voluptates quae explicabo 
+            ex aliquid, minima dolor velit earum sequi nisi cumque cupiditate quia nostrum ullam? 
+            Ipsa nam possimus dignissimos dicta.
+          </h2> 
+        
+        </div>
       
-    </div>
-    <div class="col">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img id="Imagen1" src="https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498__480.jpg" class="d-block w-100" alt="...">
+        <div class="col-4 ">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img id="Imagen1" src="https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498__480.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img id="imagen2" src="{% static 'core/img/paginas-para-descargar-libros-gratis.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          </div>
         </div>
-        <div class="carousel-item">
-         <img id="imagen2" src="{% static 'core/img/paginas-para-descargar-libros-gratis.jpg' %}" class="d-block w-100" alt="...">
-        </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-         </button>
-         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Next</span>
-          </button>
-       </div>
-      </div>
-    </div>
- <div>
+      <div>  
+    
+    
+    
+  
 
 {% endblock %}
 

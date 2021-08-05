@@ -14,7 +14,6 @@
     
 {% extends 'core\base.html' %}
 {% block content %}  
-    
     <br>
     <table class="table table-dark" >
       <tr><td> Codigo</td><td>nombre libro</td><td>autor</td><td>Descripcion</td></tr>
@@ -22,8 +21,11 @@
       <tr><td>{{ve.id_libro}}</td><td>{{ve.nombre_libro}}</td><td>{{ve.autor_libro}}</td><td>{{ve.descripcion_libro}}</td></tr>
       {% endfor %}
     </table>
+    <div class=”row”>
+      <div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″>   
+        <a href="{% url 'descarga' %}" class="btn btn-primary btn-XS active"> exportar a excel </a> </div>
 
-
+      </div>
 {% endblock %}
 
 

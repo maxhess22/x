@@ -3,6 +3,17 @@ from django.forms import ModelForm
 from .models import Libro, Pais,Banco ,Categoria_libro
 from django.contrib.admin.widgets import AutocompleteSelect
 from django.contrib import admin
+from django_select2 import forms as s2forms
+
+
+
+
+
+class CategoriaWidget(s2forms.ModelSelect2Widget):
+    search_fields = [
+        "nombre_categoria",
+    ]
+
 
 
 class LibroForm(forms.ModelForm):
@@ -12,18 +23,17 @@ class LibroForm(forms.ModelForm):
         fields =[ 'nombre_libro','autor_libro'
         ,'descripcion_libro','categoria_libro']
         widgets = {
-            'nombre_libro': forms.TextInput(attrs={'cols': 80, 'rows': 20, 
-            'placeholder': 'nombre del libro' }),
+            'nombre_libro': forms.TextInput(attrs={
+            'placeholder': 'nombre del libro', 'class': 'form-control' }),
             
-            'autor_libro': forms.TextInput(attrs={'cols': 80, 'rows': 20, 
-            'placeholder': 'autor del libro'}),
+            'autor_libro': forms.TextInput(attrs={
+            'placeholder': 'autor del libro', 'class': 'form-control'}),
 
-            'descripcion_libro': forms.TextInput(attrs={'cols': 80, 'rows': 20, 
-            'placeholder': 'descripcion'}),
+            'descripcion_libro': forms.TextInput(attrs={
+            'placeholder': 'descripcion', 'class': 'form-control'}),
 
-            'categoria_libro': AutocompleteSelect(
-                Libro._meta.get_field('categoria_libro').remote_field,
-            admin.site,)
+            'categoria_libro': forms.Select(
+                attrs={'class': 'form-control select2'}),
     }
 
 
