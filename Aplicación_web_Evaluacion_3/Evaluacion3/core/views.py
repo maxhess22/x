@@ -9,9 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 
 
-@login_required
-def form(request):   
-    return render(request,'core/Formulario.html')
+
 
 @login_required
 def home(request):

@@ -1,4 +1,10 @@
 {% extends 'core\base.html' %}
+
+{% block title %}
+ Formulario Libros
+{% endblock %} 
+
+
 {% block content %}     
 
 
@@ -6,7 +12,7 @@
 <div id="container1" class="container-sm">
   <div class="row">
     <div class=" col-sm-4 offset-sm-3">
-      <div class="card bg-secondary">
+      <div class="card bg-dark">
         <div class="card-body">
           <form action="" method="POST" id="formulario">
             {% csrf_token %}
@@ -32,11 +38,9 @@
             <hr>
             <div class="row">
               <div class="col-sm-1">
-                <input class="btn btn-info" type="submit"  id="enviar" value="enviar">
+                <input class="btn btn-success" type="submit"  id="enviar" value="enviar">
               </div>
-              <div class="col-sm-1 offset-sm-2">
-              <input class="btn btn-info" type="reset"   id="limpiar " value="limpiar">
-              </div>
+          
             </div>
           </form >
         </div>
