@@ -14,19 +14,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <title>login</title>
   </head>
-<body>
-    <div id="container1" class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 offset-md-3">
-            <div class="card">
-              <div class="card-body">
+<body class="bg-secondary">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container-fluid ">
+        <div class="row text-center">
+          <div class=" col-md-3 offset-md-4">
+            <div class="card text-white bg-dark md-3">
+              
+              <div class="card-header">
+                <img class="img-fluid" src="{%  static 'core/img/72-727918_naruto-uchiha-logo-uchiha-symbol.png'  %}" alt="">
                 <form action="" method="POST" id="formulario">
-                  {% csrf_token %}
-                  {{ form | crispy  }}
-                  
-                  <hr>
-                  <input class="btn btn-primary" type="submit"   value="ingresar">
-                </form >
+                    {% csrf_token %}
+                    
+                    {{ form | crispy  }}
+                    <br>
+                    <hr>
+                    <input class="btn btn-success" type="submit"   value="ingresar">
+                  </form >
               </div>
             </div>
           </div>

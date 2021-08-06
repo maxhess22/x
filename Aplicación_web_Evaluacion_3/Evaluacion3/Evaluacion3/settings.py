@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 SELECT2_PACKAGE= 'Boostrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 
