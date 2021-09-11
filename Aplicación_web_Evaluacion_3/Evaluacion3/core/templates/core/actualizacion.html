@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+    {% block content %}
+
+    
+    <br>
+    <br>
+    <div id="container1" class="container-sm">
+      <div class="row">
+        <div class=" col-sm-4 offset-sm-3">
+          <div class="card bg-dark">
+            <div class="card-body">
+              <form action="" method="POST" id="formulario">
+                {% csrf_token %}
+                <div class="form-group" >
+                  {{form.id_libro}}
+                </div>
+                <br>
+                <div class="form-group">
+                  {{form.nombre_libro}}
+                </div>
+                <br>
+                <div class="form-group">
+                  {{form.autor_libro}}
+                  </div>
+                  <br>
+                <div class="form-group">
+                  {{form.descripcion_libro}}
+                </div>
+                <br>
+                <div class="form-group">
+                  {{form.categoria_libro }}
+                </div>
+                <hr>
+                <input class="btn btn-fluid btn-success" type="submit"  id="enviar" value="enviar">
+                <a href="{% url 'visualizar1' %}" class="btn btn-fluid btn-secondary">Volver</a>
+              </form >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% endblock %}
+
+
+
+

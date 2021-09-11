@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% block content %}  
+    
+  <br> 
+  <br>  
+  <div class="row">
+    <div class="col-md-8 offset-sm-2">
+        <table class="table table-borderless table-dark" >
+          
+            <tr>
+              <td>Codigo</td>
+              <td>Nombre libro</td>
+              <td>Autor</td>
+              <td>Descripcion</td>
+            </tr>
+   
+          
+          
+            {%for v in libros%}
+            <tr>
+              <td>{{v.id}}</td>
+              <td>{{v.nombre_libro}}</td>
+              <td>{{v.autor_libro}}</td>
+              <td>{{v.descripcion_libro}}</td>
+            </tr>
+            {% endfor %}
+     
+        </table>
+    </div>
+  </div>
+    
+    <div class=”row”>
+      <div class="col-3 offset-sm-2">   
+        <a href="{% url 'descarga' %}" class="btn btn-success btn-XS active"> exportar a excel </a> </div>
+
+      </div>
+{% endblock %}
+

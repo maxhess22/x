@@ -1,4 +1,4 @@
-{% extends 'core\base.html' %}
+{% extends 'core/base.html' %}
 
 {% block title %}
  Formulario Libros
@@ -6,9 +6,8 @@
 
 
 {% block content %}     
-
-
-
+<br>
+<br>
 <div id="container1" class="container-sm">
   <div class="row">
     <div class=" col-sm-4 offset-sm-3">
@@ -36,13 +35,18 @@
               {{form.categoria_libro }}
             </div>
             <hr>
-            <div class="row">
-              <div class="col-sm-1">
-                <input class="btn btn-success" type="submit"  id="enviar" value="enviar">
-              </div>
-          
-            </div>
+            <input class="btn btn-fluid btn-success" type="submit"  id="enviar" value="enviar">
+            <input type="button"  class="btn btn-fluid btn-secondary" value="volver">
           </form >
+          <br>
+          {% if dato is True %}
+            {{mensaje}}
+          {% endif %} 
+          {% if Formulario.save %}
+            <div class="alert alert-primary" role="alert">
+                {{mensaje}}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>

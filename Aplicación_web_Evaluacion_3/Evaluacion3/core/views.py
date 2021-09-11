@@ -1,11 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import (render, get_object_or_404, 
+                                HttpResponseRedirect)
 from django.template import loader
 from .models import Libro,Categoria_libro
 from django.forms import ModelForm
 from .forms import LibroForm
-import django_excel as excel
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from excel_response import ExcelResponse
+from openpyxl import Workbook
+from openpyxl.styles import Alignment,Border,Font,PatternFill,Side
+from django_excel_response import ExcelResponse
+
+
+
+
+
 
 
 
@@ -22,9 +32,11 @@ def form_libro(request):
     datos ={ 'form': LibroForm()}
     if request.method== 'POST':
         Formulario = LibroForm(request.POST)
+        mensaje = "correcto"
         if Formulario.is_valid:
             Formulario.save()
-            datos['mensaje'] = "Guardados correctamente"
+            messages.success(request, "logrado")
+            datos['mensaje'] = "Guardados correctamente",True
 
     return render(request,'core/form_libro.html', datos)
 
@@ -35,34 +47,60 @@ def visualizacion(request):
     return render(request,'core/MostratDtatos.html',datos)
 
 @login_required
-def listresults(request):
-    export = []
-    # Se agregan los encabezados de las columnas
-    export.append([
+def excel(request):
+    data = []
+    data.append([
         'nombre libro',
         'autor libro',
         'descripcion',
         'categoria libro',
-        ])
-
-    # Se obtienen los datos de la tabla o model y se agregan al array
+    ])
     results = Libro.objects.all()
     for result in results:
-        # ejemplo para dar formato a fechas, estados (si/no, ok/fail) o
-        # acceder a campos con relaciones y no solo al id
-        export.append([
+  
+        data.append([
             result.nombre_libro,
             result.autor_libro,
             result.descripcion_libro,
             result.categoria_libro.nombre_categoria,
-            ])
+        ])
+    return ExcelResponse(data,'reportes de libros',font='name SimSum')
+    
+    
+@login_required
+def delete(request, id):
 
-    # se transforma el array a una hoja de calculo en memoria
-    sheet = excel.pe.Sheet(export)
+    libro = Libro.objects.get(id = id)
+    libro.delete()
 
-    # se devuelve como "Response" el archivo para que se pueda "guardar"
-    # en el navegador, es decir como hacer un "Download"
-    return excel.make_response(sheet, "xlsx", file_name="TEST.csv")
+    return HttpResponseRedirect("/visualizar")
+
+
+
+
+
+
+
+
+@login_required
+def actualizacion(request, id):
+    libro = Libro.objects.get(id = id)
+
+    contexto = {
+        'form': LibroForm(instance=libro)
+    }
+
+    if request.method== 'POST':
+        
+        formulario = LibroForm(data=request.POST,instance=libro)
+        if formulario.is_valid:
+            formulario.save()
+            return HttpResponseRedirect("/visualizar")
+    
+    return render(request, 'core/actualizacion.html', contexto)
+ 
+
+
 
 
 

@@ -1,39 +1,49 @@
+{% extends 'core/base.html' %}
 
+{% block title %}
+Visualizacion de datos
+{% endblock %}
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-{% extends 'core\base.html' %}
 {% block content %}  
-    <br>
     
-    
+  <br> 
+  <br>  
   <div class="row">
     <div class="col-md-8 offset-sm-2">
-        <table class="table table-dark" >
-          <tr><td> Codigo</td><td>nombre libro</td><td>autor</td><td>Descripcion</td></tr>
-          {%for ve in libros%}
-          <tr><td>{{ve.id_libro}}</td><td>{{ve.nombre_libro}}</td><td>{{ve.autor_libro}}</td><td>{{ve.descripcion_libro}}</td></tr>
-          {% endfor %}
+        <table class="table table-borderless table-dark" >
+          
+            <tr>
+              <td>Codigo</td>
+              <td>Nombre libro</td>
+              <td>Autor</td>
+              <td>Descripcion</td>
+              <td>Opciones</td>
+              <td>      </td>
+            </tr>
+   
+          
+          
+            {%for v in libros%}
+            <tr>
+              <td>{{v.id}}</td>
+              <td>{{v.nombre_libro}}</td>
+              <td>{{v.autor_libro}}</td>
+              <td>{{v.descripcion_libro}}</td>
+              <td><a href="{% url 'actualizacion' v.id %}" class="btn btn-secondary"> Modificar</a>
+              <td><a href="{% url 'borrar' v.id %}" class="btn btn-danger"> Borrar</a>
+              
+              </td>
+            
+            </tr>
+            {% endfor %}
+     
         </table>
     </div>
   </div>
     
-    
-    
-    
     <div class=”row”>
       <div class="col-3 offset-sm-2">   
-        <a href="{% url 'descarga' %}" class="btn btn-primary btn-XS active"> exportar a excel </a> </div>
+        <a href="{% url 'descarga' %}" class="btn btn-success btn-XS active"> exportar a excel </a> </div>
 
       </div>
 {% endblock %}

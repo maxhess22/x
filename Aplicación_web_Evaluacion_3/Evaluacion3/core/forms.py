@@ -33,7 +33,7 @@ class LibroForm(forms.ModelForm):
             'placeholder': 'descripcion', 'class': 'form-control'}),
 
             'categoria_libro': forms.Select(
-                attrs={'class': 'form-control select2'}),
+                attrs={'class': 'form-control select2 '}),
     }
 
 
